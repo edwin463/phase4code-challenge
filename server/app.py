@@ -21,7 +21,7 @@ db.init_app(app)
 api = Api(app)  # Initialize Flask-RESTful
 
 # -------------------------------
-# 📌 Home Route (Just for Testing)
+# Home Route (Just for Testing)
 # -------------------------------
 @app.route('/')
 def index():
@@ -29,7 +29,7 @@ def index():
 
 
 # -------------------------------
-# 📌 GET /restaurants (Retrieve all restaurants)
+# GET /restaurants (Retrieve all restaurants)
 # -------------------------------
 @app.route('/restaurants', methods=['GET'])
 def get_restaurants():
@@ -38,7 +38,7 @@ def get_restaurants():
 
 
 # -------------------------------
-# 📌 GET /restaurants/<id> (Retrieve a restaurant by ID)
+# GET /restaurants/<id> (Retrieve a restaurant by ID)
 # -------------------------------
 @app.route('/restaurants/<int:id>', methods=['GET'])
 def get_restaurant(id):
@@ -49,7 +49,7 @@ def get_restaurant(id):
 
 
 # -------------------------------
-# 📌 DELETE /restaurants/<id> (Delete a restaurant)
+# DELETE /restaurants/<id> (Delete a restaurant)
 # -------------------------------
 @app.route('/restaurants/<int:id>', methods=['DELETE'])
 def delete_restaurant(id):
@@ -62,7 +62,7 @@ def delete_restaurant(id):
 
 
 # -------------------------------
-# 📌 GET /pizzas (Retrieve all pizzas)
+# GET /pizzas (Retrieve all pizzas)
 # -------------------------------
 @app.route('/pizzas', methods=['GET'])
 def get_pizzas():
@@ -71,7 +71,7 @@ def get_pizzas():
 
 
 # -------------------------------
-# 📌 POST /restaurant_pizzas (Add pizza to a restaurant)
+# POST /restaurant_pizzas (Add pizza to a restaurant)
 # -------------------------------
 @app.route('/restaurant_pizzas', methods=['POST'])
 def add_restaurant_pizza():

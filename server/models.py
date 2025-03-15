@@ -49,7 +49,7 @@ class Pizza(db.Model, SerializerMixin):
     # Relationship: A pizza has many RestaurantPizzas
     restaurant_pizzas = db.relationship('RestaurantPizza', backref='pizza', cascade="all, delete-orphan")
 
-    # 🔥 Exclude `restaurant_pizzas` when returning all pizzas
+    # Exclude `restaurant_pizzas` when returning all pizzas
     serialize_rules = ('-restaurant_pizzas',)
 
     def to_dict(self):
